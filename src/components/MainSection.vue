@@ -23,7 +23,7 @@
             </i-card>
           </SplideSlide>
 
-          
+          `
         </Splide>
       </i-column>
     </i-row>
