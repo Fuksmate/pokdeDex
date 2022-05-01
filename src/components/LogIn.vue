@@ -40,7 +40,7 @@ export default {
   methods: {
     setNickname() {
       const isNickname = this.schema.group.nickname.value
-
+      localStorage.name = this.schema.group.nickname.value
       isNickname && (this.visible = false)
     },
   },

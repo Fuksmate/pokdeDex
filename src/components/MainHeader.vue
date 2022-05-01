@@ -1,7 +1,7 @@
 <template>
   <i-navbar>
     <i-navbar-brand href="/">
-      Navbar
+      {{ name }}
     </i-navbar-brand>
     <i-navbar-collapsible class="_justify-content:flex-end">
       <i-nav>
@@ -19,12 +19,8 @@
   </i-navbar>
 </template>
 
-<script>
-export default {
-  data() {
-    return {}
-  },
-}
+<script setup>
+  const name = localStorage.name
 </script>
 
 <style></style>
