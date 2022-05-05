@@ -5,9 +5,7 @@
     v-model="visible"
     size="sm"
   >
-    <template #header>
-      Hello
-    </template>
+    <template #header> Hello </template>
     <i-form v-model="schema">
       <i-form-group name="group">
         <i-form-group required>
@@ -27,24 +25,24 @@
 export default {
   data() {
     return {
-      visible: true, //channge to true
+      visible: false, //channge to true
       schema: this.$inkline.form({
         group: {
           nickname: {
-            validators: [{ name: 'required' }],
+            validators: [{ name: "required" }],
           },
         },
       }),
-    }
+    };
   },
   methods: {
     setNickname() {
-      const isNickname = this.schema.group.nickname.value
-      localStorage.name = this.schema.group.nickname.value
-      isNickname && (this.visible = false)
+      const isNickname = this.schema.group.nickname.value;
+      localStorage.name = this.schema.group.nickname.value;
+      isNickname && (this.visible = false);
     },
   },
-}
+};
 </script>
 
 <style></style>
